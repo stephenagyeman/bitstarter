@@ -73,7 +73,7 @@ if(require.main == module) {
        checkJson = checkHtmlFile(program.file, program.checks);
     }
     else if (fs.existsSync(program.url)){
-       rest.get(apiurl).on('complete', function(url) {
+       rest.get(program.url).on('complete', function(url) {
          checkJson = checkHtmlFile(url, program.checks);
          });
       
